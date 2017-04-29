@@ -1,5 +1,6 @@
 {
   "name": "angular2-starter",
+  "description": "This is angular 2 application for starter",
   "version": "1.0.0",
   "scripts": {
     "start": "./node_modules/.bin/http-server -c-1 ."
