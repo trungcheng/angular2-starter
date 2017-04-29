@@ -16,3 +16,6 @@ body, input[text], button {
   	color: #000; 
   	font-family: Arial, Georgia; 
 }
+.column {
+	border-right: 3px solid #f00;
+}

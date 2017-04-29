@@ -27,6 +27,7 @@
         'platform-browser-dynamic',
         'router-deprecated',
         'upgrade',
+        'forms',
     ];
 
     // Add map entries for each angular package
