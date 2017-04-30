@@ -33,3 +33,6 @@ body, input[text], button {
 .table {
     margin-top: 20px !important;
 }
+.lesson-text {
+    line-height: 45px !important;
+}
