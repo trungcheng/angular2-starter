@@ -1,0 +1,12 @@
+<table class="table">
+	<thead>
+		<th class="title">Name</th>
+		<th class="title">Index</th>
+	</thead>
+	<tbody>
+		<tr *ngFor="let user of users; let i = index; trackBy: track(user)">
+			<td>{{ user.name }}</td>
+			<td>{{ i }}</td>
+		</tr>
+	</tbody>
+</table>

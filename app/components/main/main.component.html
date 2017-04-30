@@ -14,6 +14,25 @@
 
 		<div class="col-md-4 column">
 			<h3>Directives</h3>
+
+			<div 
+				#tg="collapsible" 
+				toggle-on-click 
+				[toggled]="toggled" 
+				(toggled)="onToggle($event)"
+				[class.toggled]="tg.toggled"
+			>
+				<p class="toggleClick">Click here to toggle background color</p>		
+			</div>
+
+			<users>
+				<user id="1" name="Dinh Trung"></user>
+				<user id="2" name="Tran Cuong"></user>
+				<user id="3" name="Thai Hung"></user>
+				<user id="3" name="Pham Trong"></user>
+				<user id="4" name="Do Tuan"></user>
+				<user id="5" name="Quang Anh"></user>
+			</users>
 		</div>
 
 		<div class="col-md-4 column" style="border: none;">
