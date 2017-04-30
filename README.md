@@ -6,6 +6,9 @@ npm install
 
 # Start server
 npm start
+
+# Start service api
+npm run serve
 ```
 
 # Main contents

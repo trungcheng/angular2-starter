@@ -27,6 +27,9 @@ body, input[text], button {
 .toggleClick {
     cursor: pointer;
 }
+.toggleClick:hover {
+    text-decoration: underline;
+}
 .title {
     padding-left: 8px;
 }
@@ -35,4 +38,7 @@ body, input[text], button {
 }
 .lesson-text {
     line-height: 45px !important;
+}
+.btnDelete {
+    margin-top: 10px !important;
 }

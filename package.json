@@ -3,7 +3,8 @@
   "description": "This is angular 2 application for starter",
   "version": "1.0.0",
   "scripts": {
-    "start": "./node_modules/.bin/http-server -c-1 ."
+    "start": "./node_modules/.bin/http-server -c-1 .",
+    "serve": "./node_modules/.bin/ts-node ./app/server.ts"
   },
   "repository": {
     "type": "git",
@@ -21,15 +22,17 @@
     "@angular/platform-browser-dynamic": "4.0.0",
     "@angular/router": "4.0.0",
     "body-parser": "1.15.1",
+    "cors": "^2.8.3",
     "express": "4.13.4",
     "lodash": "4.13.1",
     "rxjs": "5.1.0",
     "systemjs": "0.19.27",
-    "ts-node": "3.0.2",
-    "typescript": "2.2.0",
     "zone.js": "0.8.4"
   },
   "devDependencies": {
-    "http-server": "^0.9.0"
+    "http-server": "^0.9.0",
+    "ts-node": "1.4.3",
+    "typescript": "^1.8.10",
+    "typings": "^0.8.1"
   }
 }

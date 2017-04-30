@@ -1,5 +1,6 @@
 import { NgModule, Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { HttpModule } from '@angular/http';
 import { BrowserModule } from '@angular/platform-browser';
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 
@@ -9,7 +10,7 @@ import { ColorPreviewerComponent } from './components/color-picker/color-preview
 import { UsersComponent } from './components/user-lists/user-lists.component';
 import { LessonsComponent } from './components/lesson-lists/lesson-lists.component';
 
-import "rxjs/Rx";
+import 'rxjs/Rx';
 
 import { ToggleOnClick } from './directives/toggle-on-click.directive';
 import { User } from './directives/user.directive';
@@ -41,7 +42,7 @@ export class AppComponent {
 }
 
 @NgModule({
-  	imports: [ BrowserModule, FormsModule ],
+  	imports: [ BrowserModule, FormsModule, HttpModule ],
   	declarations: [ 
   		AppComponent, 
   		SearchBoxComponent, 

@@ -38,7 +38,8 @@
 		<div class="col-md-4 column" style="border: none;">
 			<h3>Services</h3>
 
-			<input type="text" placeholder="Add Lesson" />
+			<input type="text" placeholder="Add Lesson" 
+				(keyup.enter)="lessonsService.createLesson(inputLesson.value)" #inputLesson />
 			<lesson-lists [lessons]="lessonsService.lessons"></lesson-lists>
 		</div>
 	</div>

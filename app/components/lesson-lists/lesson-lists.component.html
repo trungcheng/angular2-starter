@@ -6,5 +6,8 @@
 		<td class="lesson-text">
 			{{ lesson.description }}
 		</td>
+		<td>
+			<button class="btnDelete" (click)="lessonsService.deleteLesson(lesson.id)">Delete</button>
+		</td>
 	</tr>
 </table>
