@@ -16,6 +16,7 @@ npm run serve
 - Build first component
 - Event handling
 - Styling component
+- Routing & Form
 - Directives
 - Template Syntax
 - Debug application
