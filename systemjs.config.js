@@ -28,6 +28,7 @@
         'router-deprecated',
         'upgrade',
         'forms',
+        'router',
     ];
 
     // Add map entries for each angular package

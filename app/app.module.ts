@@ -1,9 +1,13 @@
 import { NgModule, Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
+import { RouterModule } from '@angular/router';
 import { BrowserModule } from '@angular/platform-browser';
-import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
+import { routing, appRouterProviders } from './app.routes';
+
+import { NavbarComponent } from './components/navbar/navbar.component';
 import { SearchBoxComponent } from './components/search-box/search-box.component';
 import { ColorPickerComponent } from './components/color-picker/color-picker.component';
 import { ColorPreviewerComponent } from './components/color-picker/color-previewer.component';
@@ -19,32 +23,15 @@ import { LessonsService } from './services/lessons.service';
 
 import { lessonsData } from './data/lessons';
 
-@Component({
-	selector: 'app',
-	templateUrl: './app/components/main/main.component.html' 
-})
-export class AppComponent {
-	
-	color: string;
-
-	toggled = false;
-
-	onToggle(toggled) {
-		console.log(toggled);
-	}
-
-	lessons = lessonsData;
-
-	constructor(private lessonsService: LessonsService) {
-
-	}
-
-}
-
 @NgModule({
-  	imports: [ BrowserModule, FormsModule, HttpModule ],
+  	imports: [ 
+  		BrowserModule, 
+  		FormsModule, 
+  		HttpModule,
+  		routing
+  	],
   	declarations: [ 
-  		AppComponent, 
+  		NavbarComponent,
   		SearchBoxComponent, 
   		ColorPickerComponent, 
   		ColorPreviewerComponent,
@@ -53,11 +40,13 @@ export class AppComponent {
   		ToggleOnClick,
   		User
   	],
-  	bootstrap: [ AppComponent ],
-  	providers: [LessonsService]
+  	bootstrap: [ NavbarComponent ],
+  	providers: [ 
+  		LessonsService, 
+  		appRouterProviders,
+  		{provide: LocationStrategy, useClass: HashLocationStrategy} 
+  	]
 })
 export class AppModule {
-
+	
 }
-
-platformBrowserDynamic().bootstrapModule(AppModule);

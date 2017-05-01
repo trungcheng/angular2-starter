@@ -9,13 +9,6 @@ h2, h3 {
   	font-family: Arial, Helvetica, sans-serif;   
   	font-weight: lighter;
 }
-body { 
-  	margin: 2em; 
-}
-body, input[text], button { 
-  	color: #000; 
-  	font-family: Arial, Georgia; 
-}
 .column {
 	  border-right: 3px solid #f00;
     height: 370px;
@@ -41,4 +34,7 @@ body, input[text], button {
 }
 .btnDelete {
     margin-top: 10px !important;
+}
+.active {
+    font-weight: bold;
 }
