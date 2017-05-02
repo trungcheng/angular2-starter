@@ -1,5 +1,5 @@
 import { NgModule, Component } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
 import { BrowserModule } from '@angular/platform-browser';
@@ -26,14 +26,15 @@ import { lessonsData } from './data/lessons';
 @NgModule({
   	imports: [ 
   		BrowserModule, 
-  		FormsModule, 
+  		FormsModule,
+  		ReactiveFormsModule,
   		HttpModule,
   		routing
   	],
   	declarations: [ 
   		NavbarComponent,
   		SearchBoxComponent, 
-  		ColorPickerComponent, 
+  		ColorPickerComponent,
   		ColorPreviewerComponent,
   		UsersComponent,
   		LessonsComponent,

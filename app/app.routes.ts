@@ -7,7 +7,9 @@ import { ErrorComponent } from './pages/error/error.component';
 const routes: Routes = [
 	{ path: '', redirectTo: 'home', pathMatch: 'full' },
 	{ path: 'home', component: HomeComponent },
-	{ path: 'form-validation', component: FormComponent }
+	{ path: 'form-validation', component: FormComponent },
+	{ path: 'error', component: ErrorComponent },
+	{ path: '**', redirectTo: 'error' }
 ];
 
 export const appRouterProviders = [
